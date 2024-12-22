@@ -40,6 +40,7 @@ h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
+    text-align: center;
 }
 
 .final.show {
@@ -65,17 +66,34 @@ h4 {
     text-align: center;
     transform: translate(-50%, -50%) rotate(120deg);
     transform-origin: bottom center;
-    /* animation: change 1s infinite; */
 }
 
 .numbers span.in {
     transform: translate(-50%, -50%) rotate(0deg);
-    animation: in 1s ease-in-out;
+    animation: enter .5s ease-in-out;
 }
 
 .numbers span.out {
     transform: translate(-50%, -50%) rotate(0deg);
-    animation: out 1s ease-in-out;;
+    animation: exit .6s ease-in-out;;
+}
+
+button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
 }
 
 @keyframes hide {
@@ -99,7 +117,7 @@ h4 {
     }
 }
 
-@keyframes in {
+@keyframes enter {
     0% {
         transform: translate(-50%, -50%) rotate(120deg);
     }
@@ -114,11 +132,10 @@ h4 {
     }
 }
 
-@keyframes out {
+@keyframes exit {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
-
     60% {
         transform: translate(-50%, -50%) rotate(20deg);
     }
